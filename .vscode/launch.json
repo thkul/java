@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Collections",
+      "request": "launch",
+      "mainClass": "Collections",
+      "projectName": "java_f2d2f891"
+    },
+    {
+      "type": "java",
       "name": "Interfaces2",
       "request": "launch",
       "mainClass": "Interfaces2",
