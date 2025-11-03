@@ -3,65 +3,24 @@
   "configurations": [
     {
       "type": "java",
-      "name": "Collections",
+      "name": "Other",
       "request": "launch",
-      "mainClass": "Collections",
+      "mainClass": "Other",
       "projectName": "java_f2d2f891"
     },
     {
-      "type": "java",
-      "name": "Interfaces2",
+      "name": "Run current Java file with qolorun",
+      "type": "pwa-node",
       "request": "launch",
-      "mainClass": "Interfaces2",
-      "projectName": "java_f2d2f891"
-    },
-    {
-      "type": "java",
-      "name": "Main",
-      "request": "launch",
-      "mainClass": "Main",
-      "projectName": "java_f2d2f891"
-    },
-    {
-      "type": "java",
-      "name": "Interfaces",
-      "request": "launch",
-      "mainClass": "Interfaces",
-      "projectName": "java_f2d2f891"
-    },
-    {
-      "type": "java",
-      "name": "HelloWorld",
-      "request": "launch",
-      "mainClass": "HelloWorld",
-      "projectName": "java_f2d2f891"
-    },
-    {
-      "type": "java",
-      "name": "lab",
-      "request": "launch",
-      "mainClass": "lab",
-      "projectName": "java_f2d2f891"
-    },
-    {
-      "type": "java",
-      "name": "Lab",
-      "request": "launch",
-      "mainClass": "Lab"
-    },
-    {
-      "type": "java",
-      "name": "Lab",
-      "request": "launch",
-      "mainClass": "interfaces.Lab"
-    },
-    {
-      "type": "java",
-      "name": "Run current Java file",
-      "request": "launch",
-      "mainClass": "${fileBasenameNoExtension}",
-      "preLaunchTask": "compile current Java file",
-      "console": "integratedTerminal"
+      "program": "qolorun",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "runtimeExecutable": "qolorun",
+      "args": [
+        "java",
+        "${file}"
+      ],
+      "internalConsoleOptions": "neverOpen"
     }
   ]
 }
