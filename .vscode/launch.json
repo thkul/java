@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Async",
+      "request": "launch",
+      "mainClass": "Async",
+      "projectName": "java_f2d2f891"
+    },
+    {
+      "type": "java",
       "name": "Other",
       "request": "launch",
       "mainClass": "Other",
