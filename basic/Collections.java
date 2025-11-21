@@ -11,6 +11,15 @@ public class Collections {
     System.out.println(list.get(0)); // access by index
     System.out.println(list.size()); // count elements
 
+    // ----- LinkedList -----
+    // Doubly-linked list, fast insert/remove at ends, supports List and Queue
+    LinkedList<String> linkedList = new LinkedList<>();
+    linkedList.add("a"); // add to tail
+    linkedList.addFirst("start"); // add to head
+    linkedList.removeLast(); // remove tail
+    System.out.println(linkedList.getFirst()); // view head
+    System.out.println(linkedList.size());
+
     // ----- Set -----
     // Unordered collection, no duplicates.
     Set<String> set = new HashSet<>();
@@ -62,16 +71,6 @@ public class Collections {
     System.out.println(stack.peek()); // view top
     System.out.println(stack.pop()); // remove top
     System.out.println(stack.empty());
-
-    // ----- LinkedList -----
-    // Doubly-linked list, fast insert/remove at ends, supports List and Queue
-    // interfaces
-    LinkedList<String> linkedList = new LinkedList<>();
-    linkedList.add("a"); // add to tail
-    linkedList.addFirst("start"); // add to head
-    linkedList.removeLast(); // remove tail
-    System.out.println(linkedList.getFirst()); // view head
-    System.out.println(linkedList.size());
 
     // ~~~~~~~~~~ features ~~~~~~~~~~
     // fixed-size structures backed by an array

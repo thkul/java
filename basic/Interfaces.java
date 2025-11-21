@@ -15,7 +15,6 @@ public class Interfaces {
             }
         }
         
-        // Interfaces
         interface Speaker { void speak2(); }
         class Human2 implements Speaker { public void speak2() { System.out.println("Hi2"); } }
         class Robot2 implements Speaker { public void speak2() { System.out.println("Beep2"); } }

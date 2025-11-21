@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "calc",
+      "request": "launch",
+      "mainClass": "calc",
+      "projectName": "java_f2d2f891"
+    },
+    {
+      "type": "java",
+      "name": "App",
+      "request": "launch",
+      "mainClass": "calculator.src.main.java.com.imtable.App",
+      "projectName": "java_f2d2f891"
+    },
+    {
+      "type": "java",
       "name": "Async",
       "request": "launch",
       "mainClass": "Async",
