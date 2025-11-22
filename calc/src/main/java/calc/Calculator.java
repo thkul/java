@@ -1,31 +1,23 @@
 package calc;
 
-import calc.operations.*;
-
-import java.util.ArrayList;
+import calc.operations.Operation;
 import java.util.List;
 
 public class Calculator {
   private final List<Operation> operations;
 
-  public Calculator() {
-    operations = new ArrayList<>();
-    operations.add(new AddOperation());
-    operations.add(new SubtractOperation());
-    operations.add(new MultiplyOperation());
-    operations.add(new DivideOperation());
+  public Calculator(List<Operation> operations) {
+    this.operations = operations;
+  }
+
+  public double performOperation(Operation operation, double... numbers) {
+    if (numbers == null || numbers.length == 0) {
+      throw new IllegalArgumentException("No numbers provided");
+    }
+    return operation.execute(numbers);
   }
 
   public List<Operation> getOperations() {
     return operations;
-  }
-
-  public double performOperation(String operationName, double... numbers) {
-    for (Operation operation : operations) {
-      if (operation.getName().equals(operationName)) {
-        return operation.apply(numbers);
-      }
-    }
-    throw new IllegalArgumentException("Unknown operation");
   }
 }
