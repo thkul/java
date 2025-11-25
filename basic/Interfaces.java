@@ -5,13 +5,13 @@ public class Interfaces {
 
         Human h = new Human();
         Robot r = new Robot();
-        Object[] arr = { h, r };
+        Object[] speakers = { h, r };
         
-        for (Object speaker : arr) {
-            if (speaker instanceof Human) {
-                ((Human)speaker).speak();
-            } else if (speaker instanceof Robot) {
-                ((Robot)speaker).speak();
+        for (Object s : speakers) {
+            if (s instanceof Human) {
+                ((Human)s).speak();
+            } else if (s instanceof Robot) {
+                ((Robot)s).speak();
             }
         }
         
@@ -19,9 +19,9 @@ public class Interfaces {
         class Human2 implements Speaker { public void speak2() { System.out.println("Hi2"); } }
         class Robot2 implements Speaker { public void speak2() { System.out.println("Beep2"); } }
 
-        Speaker[] arr2 = { new Human2(), new Robot2() };
+        Speaker[] speakers2 = { new Human2(), new Robot2() };
 
-        for (Speaker s : arr2) {
+        for (Speaker s : speakers2) {
             s.speak2();
         }
     }  
