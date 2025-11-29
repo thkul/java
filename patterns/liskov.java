@@ -5,6 +5,7 @@ public class liskov {
     void process(double amount);
   }
 
+  // pattern (an object of the Parent type must work with any Child)
   // Regular payment processor: works with real payments
   class StripeProcessor implements PaymentProcessor {
     @Override
@@ -37,7 +38,7 @@ public class liskov {
     public double getAmount() { return amount; }
   }
 
-  // anti-pattern: violates Liskov Substitution Principle
+  // anti-pattern
   public class FreePaymentProcessor implements PaymentProcessor {
     @Override
     public void process(double amount) {
