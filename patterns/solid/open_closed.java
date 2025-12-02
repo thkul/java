@@ -1,11 +1,14 @@
 package patterns;
 
+// Single Responsibility Principle:
+// One class = one job.
+// Open-Closed Principle:
+// A class should be open for extension but closed for modification.
+
 public class open_closed {
   
-  // pattern (classes Open for extension, Closed for modification)
-  interface PaymentMethod {
-    Receipt process(double amount);
-  }
+  // pattern
+  interface PaymentMethod { Receipt process(double amount); }
 
   public class CreditCardPayment implements PaymentMethod {
     @Override
@@ -30,16 +33,10 @@ public class open_closed {
   }
 
   public class Receipt {
-    private String type;
-    private double amount;
-    private String status;
-
+    private String type; private double amount; private String status;
     public Receipt(String type, double amount, String status) {
-      this.type = type;
-      this.amount = amount;
-      this.status = status;
+      this.type = type; this.amount = amount; this.status = status;
     }
-
     @Override
     public String toString() {
       return "Receipt{" +
@@ -65,38 +62,24 @@ public class open_closed {
     private void processCreditCard(Payment p) {
       System.out.println("Processing credit card for amount " + p.getAmount());
     }
-
     private void processPayPal(Payment p) {
       System.out.println("Processing PayPal for amount " + p.getAmount());
     }
-
     private void processCrypto(Payment p) {
       System.out.println("Processing crypto for amount " + p.getAmount());
     }
   }
 
-  enum PaymentType {
-    CREDIT_CARD,
-    PAYPAL,
-    CRYPTO
-  }
+  enum PaymentType { CREDIT_CARD, PAYPAL, CRYPTO }
 
   class Payment {
-    private PaymentType type;
-    private double amount;
-
+    private PaymentType type; private double amount;
     public Payment(PaymentType type, double amount) {
-      this.type = type;
-      this.amount = amount;
+      this.type = type; this.amount = amount;
     }
 
-    public PaymentType getType() {
-      return type;
-    }
+    public PaymentType getType() { return type; }
 
-    public double getAmount() {
-      return amount;
-    }
+    public double getAmount() { return amount; }
   }
-
 }

@@ -1,5 +1,7 @@
 package patterns.gof_behavioral;
 
+// Wrap an object → get new features → leave the original code untouched.
+
 public class decorator {
   interface Payable {
     void pay(double amount);
@@ -29,7 +31,3 @@ public class decorator {
 
 Payable processor = new LoggingPaymentDecorator(new StripePaymentProcessor());
 processor.pay(100.0);
-
-
-
-

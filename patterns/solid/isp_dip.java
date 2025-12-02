@@ -1,7 +1,12 @@
 package patterns;
 
+// Interface Segregation Principle: 
+// Do not force a Client to implement methods it does not need.
+// Dependency Inversion Principle: 
+// Higher-level Modules must not depend on lower-level details.
+
 public class isp_dip {
-  // pattern ISP (do not force a Client to implement methods it does not need)
+  // pattern ISP
   interface Payable { void pay(double amount); }
 
   interface Refundable { void refund(String paymentId); }
@@ -31,7 +36,7 @@ public class isp_dip {
     public void refund(String paymentId) { throw new RuntimeException("Free can't refund"); }
   }
 
-  // pattern DIP (higher-level Modules must not depend on lower-level details)
+  // pattern DIP
   interface PaymentProcessor { void pay(double amount); }
 
   class StripePayment implements PaymentProcessor {

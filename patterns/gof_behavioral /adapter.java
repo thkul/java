@@ -1,5 +1,7 @@
 package patterns.gof_behavioral;
 
+// It wraps legacy or external code so it finally behaves the way your system expects.
+
 public class adapter {
 
 	// Our existing contract used across the application

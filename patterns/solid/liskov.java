@@ -1,11 +1,14 @@
 package patterns;
 
+// Liskov Substitution Principle:
+// An object of the parent type must work with any child.
+
 public class liskov {
   public interface PaymentProcessor {
     void process(double amount);
   }
 
-  // pattern (an object of the Parent type must work with any Child)
+  // pattern
   // Regular payment processor: works with real payments
   class StripeProcessor implements PaymentProcessor {
     @Override
