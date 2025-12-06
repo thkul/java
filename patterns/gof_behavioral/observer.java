@@ -22,7 +22,6 @@ class OrderStatusTracker implements OrderSubject {
   public void notifyObservers(String newStatus) {
     for (OrderObserver o : observers) { o.update(orderId, newStatus); }
   }
-
   // Domain business method
   public void changeStatus(String newStatus) {
     System.out.println("Order " + orderId + " changed status to: " + newStatus);
