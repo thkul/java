@@ -1,5 +1,6 @@
 package patterns.gof_behavioral;
 
+// Behavior changes by swapping internal state objects
 public class state {
   interface OrderState {  // State interface
     void pay(Order ctx); void ship(Order ctx);
