@@ -1,6 +1,9 @@
 package patterns.gof_behavioral;
 
-// the skeleton is fixed, the details are customizable
+
+// The skeleton is fixed, the details are customizable.
+// You define a general algorithm in a base class, 
+// and allow subclasses to override specific steps.
 
 public class template {
   // The skeleton of the algorithm
