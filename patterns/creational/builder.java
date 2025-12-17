@@ -10,7 +10,6 @@ public class builder {
       product = b.product;
       quantity = b.quantity;
     }
-
     public String toString() {
       return product + " x" + quantity;
     }
